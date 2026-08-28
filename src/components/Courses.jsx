@@ -1,30 +1,40 @@
 import React from 'react';
 
-const courses = [
+const certificateCourses = [
   {
-    category: "Vocal Arts",
-    title: "Hindustani Classical Vocal",
-    desc: "Dive deep into the ragas, talas, and the soulful expression of North Indian classical music.",
+    title: "Lydian Classical Music",
+    desc: "Explore classical music through structured vocal training, musical expression, and a strong foundation in technique."
   },
   {
-    category: "Vocal Arts",
-    title: "Carnatic Vocal",
-    desc: "Master the intricate rhythms and devotional compositions of South Indian classical music.",
+    title: "Cinema Sugama Music",
+    desc: "Learn expressive singing through the rich tradition of Kannada cinema and Sugama Sangeetha."
   },
   {
-    category: "Instrumental",
-    title: "Sitar & Veena",
-    desc: "Learn stringed instruments with a focus on technique, improvisation, and classical repertoire.",
+    title: "Hindustani Classical Music",
+    desc: "Discover the depth of Hindustani music through ragas, rhythm, vocal technique, and traditional compositions."
   },
   {
-    category: "Instrumental",
-    title: "Tabla & Mridangam",
-    desc: "Understand the complex world of Indian rhythm and percussion.",
+    title: "Carnatic Classical Music",
+    desc: "Build a strong foundation in Carnatic music through ragas, talas, compositions, and disciplined vocal practice."
+  }
+];
+
+const specialPrograms = [
+  {
+    title: "Voice Culture",
+    desc: "Strengthen vocal quality, breath control, pitch, clarity, range, and overall vocal expression."
   },
   {
-    category: "Contemporary",
-    title: "Western Classical Piano",
-    desc: "Build a strong foundation in sight-reading, theory, and classical piano performance.",
+    title: "Vocal Training",
+    desc: "Develop a confident and versatile singing voice through guided technique, practice, and musical expression."
+  },
+  {
+    title: "Studio Recording Experience",
+    desc: "Gain practical experience with studio recording, microphone techniques, and recording practices."
+  },
+  {
+    title: "Stage Performance & Personality Development",
+    desc: "Build stage presence, confidence, expression, communication, and performance skills."
   }
 ];
 
@@ -35,31 +45,44 @@ const Courses = () => {
         <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between">
           <div>
             <h2 className="text-burgundy uppercase tracking-[0.2em] text-sm font-semibold mb-4">Curriculum</h2>
-            <h3 className="text-4xl md:text-6xl font-serif">Our Courses</h3>
+            <h3 className="text-4xl md:text-6xl font-serif">Our Programs</h3>
           </div>
           <p className="text-cream/60 font-light max-w-md mt-6 md:mt-0 text-lg">
             Carefully curated programs designed for practitioners of all levels, from beginners to advanced performers.
           </p>
         </div>
 
-        <div className="flex flex-col border-t border-cream/10">
-          {courses.map((course, idx) => (
-            <div key={idx} className="group flex flex-col md:flex-row py-10 border-b border-cream/10 hover:border-burgundy transition-colors duration-300">
-              <div className="md:w-1/4 mb-4 md:mb-0">
-                <span className="text-sm font-sans tracking-widest text-burgundy uppercase group-hover:text-cream transition-colors">
-                  {course.category}
-                </span>
-              </div>
-              <div className="md:w-1/3 mb-4 md:mb-0">
-                <h4 className="text-2xl font-serif">{course.title}</h4>
-              </div>
-              <div className="md:w-5/12">
-                <p className="text-cream/60 font-light leading-relaxed">
-                  {course.desc}
-                </p>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
+          {/* Certificate Courses Card */}
+          <div className="bg-black/40 border border-cream/10 p-8 md:p-12 hover:border-burgundy/50 transition-colors duration-500 rounded-sm">
+            <h4 className="text-2xl font-serif text-burgundy mb-8">
+              Certificate Courses 
+              <span className="text-sm font-sans tracking-widest text-cream/60 uppercase ml-0 sm:ml-4 block sm:inline mt-2 sm:mt-0">— 6 Months</span>
+            </h4>
+            <div className="space-y-8">
+              {certificateCourses.map((course, idx) => (
+                <div key={idx} className="border-l-2 border-burgundy/30 pl-6 hover:border-burgundy transition-colors duration-300">
+                  <h5 className="text-xl font-serif mb-2">{course.title}</h5>
+                  <p className="text-cream/60 font-light text-sm leading-relaxed">{course.desc}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Special Training Programs Card */}
+          <div className="bg-black/40 border border-cream/10 p-8 md:p-12 hover:border-burgundy/50 transition-colors duration-500 rounded-sm">
+            <h4 className="text-2xl font-serif text-burgundy mb-8">Special Training Programs</h4>
+            <div className="space-y-8">
+              {specialPrograms.map((program, idx) => (
+                <div key={idx} className="border-l-2 border-burgundy/30 pl-6 hover:border-burgundy transition-colors duration-300">
+                  <h5 className="text-xl font-serif mb-2">{program.title}</h5>
+                  <p className="text-cream/60 font-light text-sm leading-relaxed">{program.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
         
         <div className="mt-16 text-center">
