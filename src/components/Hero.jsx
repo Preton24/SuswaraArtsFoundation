@@ -1,5 +1,32 @@
 import React from 'react';
-import heroImage from '../assets/hero.jpg';
+import InfiniteSpiral from './InfiniteSpiral';
+import godImg from '../assets/god.jpg';
+import groupImg from '../assets/group.jpg';
+import group1Img from '../assets/group1.jpg';
+import group2Img from '../assets/group2.jpg';
+import group3Img from '../assets/group3.jpg';
+import group4Img from '../assets/group4.jpg';
+import pose1Img from '../assets/pose1.jpg';
+import pose2Img from '../assets/pose2.jpg';
+import pose3Img from '../assets/pose3.jpg';
+import pose4Img from '../assets/pose4.jpg';
+import pose5Img from '../assets/pose5.jpg';
+import pose6Img from '../assets/pose6.jpg';
+
+const spiralImages = [
+  { src: pose1Img, alt: 'Classical Dance Pose', label: 'Classical Bharatanatyam' },
+  { src: groupImg, alt: 'Arts Foundation Students', label: 'Student Performance' },
+  { src: pose2Img, alt: 'Expressive Abhinaya', label: 'Recital' },
+  { src: godImg, alt: 'Divine Traditions', label: 'Spiritual Arts' },
+  { src: group1Img, alt: 'Group Concert', label: 'Annual Concert' },
+  { src: pose3Img, alt: 'Solo Recital', label: 'Classical Solo' },
+  { src: group2Img, alt: 'Gurus and Students', label: 'Gurukul Traditions' },
+  { src: pose4Img, alt: 'Dance Recital', label: 'Stage Performance' },
+  { src: group3Img, alt: 'Musical Ensemble', label: 'Classical Music' },
+  { src: pose5Img, alt: 'Vocal Performance', label: 'Vocal Class' },
+  { src: group4Img, alt: 'Celebration', label: 'Events & Recitals' },
+  { src: pose6Img, alt: 'Choreography', label: 'Dance Workshop' }
+];
 
 const Hero = () => {
   return (
@@ -11,10 +38,10 @@ const Hero = () => {
         
         {/* Text Content */}
         <div className="md:w-1/2 flex flex-col items-start text-left mt-12 md:mt-0">
-          <h2 className="text-burgundy uppercase tracking-[0.3em] text-sm md:text-base font-semibold mb-4">Discover Your Sound</h2>
+          <h2 className="text-burgundy uppercase tracking-[0.3em] text-sm md:text-base font-semibold mb-4">Discover Your Art</h2>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-cream leading-tight mb-8">
             The Art <br/>
-            <span className="italic text-cream/90">of Music</span>
+            <span className="italic text-cream/90">of Music & Dance</span>
           </h1>
           <p className="text-cream/70 font-light max-w-md text-lg mb-10 font-sans">
             A Bengaluru-based institution dedicated to nurturing artistic excellence through deep-rooted classical traditions and modern pedagogy, offering enriching online and offline classes for learners of all ages.
@@ -29,15 +56,25 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Hero Image / Vinyl Player */}
-        <div className="md:w-1/2 flex justify-center md:justify-end relative">
-          <div className="relative w-full max-w-[500px] aspect-square rounded-full flex items-center justify-center">
-            {/* Soft glow behind the image */}
-            <div className="absolute inset-0 bg-burgundy rounded-full blur-[100px] opacity-20"></div>
-            <img 
-              src={heroImage} 
-              alt="Turntable record player" 
-              className="relative z-10 w-full h-full object-cover rounded-full shadow-2xl animate-[spin_40s_linear_infinite]"
+        {/* 3D Infinite Spiral Gallery */}
+        <div className="md:w-1/2 flex justify-center md:justify-end relative w-full h-[550px]">
+          <div className="absolute inset-0 bg-burgundy rounded-full blur-[120px] opacity-25"></div>
+          <div className="w-full h-full relative z-10 overflow-hidden">
+            <InfiniteSpiral
+              items={spiralImages}
+              animationMode="all"
+              speed={0.3}
+              radius={170}
+              cardWidth={120}
+              cardHeight={130}
+              verticalSpacing={65}
+              perspective={1000}
+              cardRadius={10}
+              centerScale={1.2}
+              edgeBlur={6}
+              cardsPerTurn={7}
+              pauseOnHover={true}
+              grayscale={0}
             />
           </div>
         </div>

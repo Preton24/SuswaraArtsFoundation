@@ -1,6 +1,9 @@
 import React from 'react';
-import galleryImage from '../assets/gallery.png';
-import eventImage from '../assets/event.png';
+import group5Img from '../assets/group5.jpg';
+import group6Img from '../assets/group6.jpg';
+import group7Img from '../assets/group7.jpg';
+import pose8Img from '../assets/pose8.jpg';
+import pose9Img from '../assets/pose9.jpg';
 
 const Gallery = () => {
   return (
@@ -13,15 +16,15 @@ const Gallery = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
           <div className="md:col-span-2 aspect-video relative group overflow-hidden">
-             <img src={galleryImage} alt="Performance" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+             <img src={group5Img} alt="Annual Concert 2025" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                <span className="text-cream font-serif text-xl">Annual Concert 2025</span>
+                <span className="text-cream font-serif text-xl">Annual Concert Showcase</span>
              </div>
           </div>
           <div className="aspect-square md:aspect-auto relative group overflow-hidden">
-             <img src={eventImage} alt="Workshop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+             <img src={pose8Img} alt="Masterclass" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                <span className="text-cream font-serif text-xl">Masterclass</span>
+                <span className="text-cream font-serif text-xl">Bharatnatyam Performances</span>
              </div>
           </div>
           <div className="aspect-square md:aspect-auto relative group overflow-hidden bg-burgundy_dark flex items-center justify-center p-8 text-center">
@@ -30,7 +33,7 @@ const Gallery = () => {
              </p>
           </div>
           <div className="md:col-span-2 aspect-video relative group overflow-hidden">
-             <img src={galleryImage} alt="Performance" className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
+             <img src={group6Img} alt="Student Recital" className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105" />
              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                 <span className="text-cream font-serif text-xl">Student Recital</span>
              </div>

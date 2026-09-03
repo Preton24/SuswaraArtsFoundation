@@ -42,7 +42,7 @@ const Courses = () => {
   return (
     <section id="courses" className="bg-gray_dark text-cream py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between">
+        <div className="mb-8 md:mb-12 flex flex-col md:flex-row md:items-end justify-between">
           <div>
             <h2 className="text-burgundy uppercase tracking-[0.2em] text-sm font-semibold mb-4">Curriculum</h2>
             <h3 className="text-4xl md:text-6xl font-serif">Our Programs</h3>
@@ -85,11 +85,6 @@ const Courses = () => {
 
         </div>
         
-        <div className="mt-16 text-center">
-          <button className="border-b border-cream pb-1 text-sm tracking-widest uppercase hover:text-burgundy hover:border-burgundy transition-colors duration-300">
-            Download Full Prospectus
-          </button>
-        </div>
       </div>
     </section>
   );

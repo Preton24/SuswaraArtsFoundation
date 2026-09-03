@@ -1,5 +1,5 @@
 import React from 'react';
-import eventImage from '../assets/event.png';
+import group7Img from '../assets/group7.jpg';
 
 const Events = () => {
   return (
@@ -16,7 +16,7 @@ const Events = () => {
           {/* Featured Event Image */}
           <div className="md:col-span-5 relative aspect-[3/4] md:aspect-auto md:h-full min-h-[400px]">
             <div className="absolute inset-0 bg-burgundy_dark/20 mix-blend-multiply z-10"></div>
-            <img src={eventImage} alt="Workshop event" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+            <img src={group7Img} alt="Workshop event" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
             <div className="absolute top-6 left-6 z-20">
               <span className="bg-black text-cream text-xs uppercase tracking-widest px-4 py-2">Featured</span>
             </div>
