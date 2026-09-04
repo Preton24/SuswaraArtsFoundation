@@ -30,34 +30,34 @@ const spiralImages = [
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-20">
+    <section id="home" className="relative bg-black overflow-hidden pt-16 md:pt-20 pb-8 md:pb-10">
       {/* Background with slight radial gradient for depth */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-burgundy_dark/40 via-black to-black opacity-80"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between w-full h-full gap-12 md:gap-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between w-full h-full gap-8 md:gap-6">
         
         {/* Text Content */}
-        <div className="md:w-1/2 flex flex-col items-start text-left mt-12 md:mt-0">
-          <h2 className="text-burgundy uppercase tracking-[0.3em] text-sm md:text-base font-semibold mb-4">Discover Your Art</h2>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-cream leading-tight mb-8">
+        <div className="md:w-1/2 flex flex-col items-start text-left">
+          <h2 className="text-burgundy uppercase tracking-[0.3em] text-xs md:text-sm font-semibold mb-3">Discover Your Art</h2>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-cream leading-tight mb-5">
             The Art <br/>
             <span className="italic text-cream/90">of Music & Dance</span>
           </h1>
-          <p className="text-cream/70 font-light max-w-md text-lg mb-10 font-sans">
+          <p className="text-cream/70 font-light max-w-md text-base mb-6 font-sans">
             A Bengaluru-based institution dedicated to nurturing artistic excellence through deep-rooted classical traditions and modern pedagogy, offering enriching online and offline classes for learners of all ages.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#courses" className="inline-block border border-cream text-cream px-8 py-4 uppercase tracking-widest text-sm hover:bg-cream hover:text-black transition-colors duration-300 text-center">
+            <a href="#courses" className="inline-block border border-cream text-cream px-8 py-3.5 uppercase tracking-widest text-sm hover:bg-cream hover:text-black transition-colors duration-300 text-center font-medium">
               Explore Courses
             </a>
-            <a href="#contact" className="inline-block bg-burgundy border border-burgundy text-cream px-8 py-4 uppercase tracking-widest text-sm hover:bg-cream hover:text-black hover:border-cream transition-colors duration-300 text-center">
+            <a href="#contact" className="inline-block bg-burgundy border border-burgundy text-cream px-8 py-3.5 uppercase tracking-widest text-sm hover:bg-cream hover:text-black hover:border-cream transition-colors duration-300 text-center font-medium">
               Enroll Now
             </a>
           </div>
         </div>
 
         {/* 3D Infinite Spiral Gallery */}
-        <div className="md:w-1/2 flex justify-center md:justify-end relative w-full h-[550px]">
+        <div className="md:w-1/2 flex justify-center md:justify-end relative w-full h-[420px] md:h-[460px]">
           <div className="absolute inset-0 bg-burgundy rounded-full blur-[120px] opacity-25"></div>
           <div className="w-full h-full relative z-10 overflow-hidden">
             <InfiniteSpiral

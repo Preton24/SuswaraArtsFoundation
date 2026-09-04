@@ -7,9 +7,247 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-black text-cream font-sans;
+    @apply bg-black text-cream font-sans transition-colors duration-300;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
+}
+
+/* ==========================================================================
+   BURGUNDY & OFF-WHITE LIGHT MODE OVERRIDES
+   All rules scoped to html.light-mode to preserve dark mode as source of truth.
+   ========================================================================== */
+
+html.light-mode body {
+  background-color: #FAF7F2 !important;
+  color: #2C1810 !important;
+}
+
+/* Primary Backgrounds & Alternating Sections */
+html.light-mode .bg-black {
+  background-color: #FAF7F2 !important;
+}
+
+html.light-mode .bg-burgundy_dark {
+  background-color: #F5ECE8 !important;
+}
+
+html.light-mode .bg-burgundy_dark\/20,
+html.light-mode .bg-burgundy_dark\/40,
+html.light-mode .bg-burgundy_dark\/50,
+html.light-mode .bg-burgundy_dark\/80 {
+  background-color: #F8EFEA !important;
+}
+
+html.light-mode .bg-gray_dark {
+  background-color: #FFFFFF !important;
+}
+
+html.light-mode .bg-gray_dark\/50 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+html.light-mode .bg-black\/40,
+html.light-mode .bg-black\/50,
+html.light-mode .bg-black\/60 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+html.light-mode .bg-black\/80,
+html.light-mode .bg-black\/90,
+html.light-mode .bg-black\/95 {
+  background-color: rgba(250, 247, 242, 0.96) !important;
+}
+
+/* Keep Fullscreen Lightbox Modal Dark for optimal photo viewing */
+html.light-mode .fixed.z-50.bg-black\/95,
+html.light-mode .fixed.z-50.bg-black\/80 {
+  background-color: rgba(10, 10, 10, 0.96) !important;
+}
+
+html.light-mode .fixed.z-50.bg-black\/95 .text-cream,
+html.light-mode .fixed.z-50.bg-black\/80 .text-cream,
+html.light-mode .fixed.z-50.bg-black\/95 .text-cream\/80,
+html.light-mode .fixed.z-50.bg-black\/80 .text-cream\/80,
+html.light-mode .fixed.z-50.bg-black\/95 .text-cream\/70,
+html.light-mode .fixed.z-50.bg-black\/80 .text-cream\/70,
+html.light-mode .fixed.z-50.bg-black\/95 .text-cream\/60,
+html.light-mode .fixed.z-50.bg-black\/80 .text-cream\/60 {
+  color: #FDFBF7 !important;
+}
+
+html.light-mode .fixed.z-50.bg-black\/95 .bg-white\/10,
+html.light-mode .fixed.z-50.bg-black\/80 .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Typography & Text colors */
+html.light-mode .text-cream {
+  color: #2C1810 !important;
+}
+
+html.light-mode .text-cream\/90,
+html.light-mode .text-cream\/80,
+html.light-mode .text-cream\/70,
+html.light-mode .text-cream\/60,
+html.light-mode .text-cream\/50,
+html.light-mode .text-cream\/40 {
+  color: #5C4A42 !important;
+}
+
+html.light-mode .text-burgundy {
+  color: #8B0000 !important;
+}
+
+/* Borders */
+html.light-mode .border-cream,
+html.light-mode .border-cream\/10,
+html.light-mode .border-cream\/20,
+html.light-mode .border-cream\/30,
+html.light-mode .border-cream\/40 {
+  border-color: rgba(139, 0, 0, 0.2) !important;
+}
+
+html.light-mode .border-burgundy_dark {
+  border-color: rgba(139, 0, 0, 0.25) !important;
+}
+
+/* Navigation Bar */
+html.light-mode nav {
+  background-color: rgba(250, 247, 242, 0.95) !important;
+  border-bottom: 1px solid rgba(139, 0, 0, 0.12);
+}
+
+html.light-mode nav .text-cream,
+html.light-mode nav .text-cream\/80 {
+  color: #3C1810 !important;
+}
+
+html.light-mode nav .hover\:text-white:hover,
+html.light-mode nav .hover\:text-cream:hover {
+  color: #8B0000 !important;
+}
+
+/* Buttons & Interactive Visibility Fixes */
+html.light-mode a.bg-burgundy,
+html.light-mode button.bg-burgundy {
+  background-color: #8B0000 !important;
+  color: #FFFFFF !important;
+  border-color: #8B0000 !important;
+}
+
+html.light-mode a.bg-burgundy:hover,
+html.light-mode button.bg-burgundy:hover {
+  background-color: #5C0000 !important;
+  color: #FFFFFF !important;
+  border-color: #5C0000 !important;
+}
+
+html.light-mode a.border-cream,
+html.light-mode button.border-cream {
+  border-color: #8B0000 !important;
+  color: #8B0000 !important;
+  background-color: transparent !important;
+}
+
+html.light-mode a.border-cream:hover,
+html.light-mode button.border-cream:hover {
+  background-color: #8B0000 !important;
+  color: #FFFFFF !important;
+  border-color: #8B0000 !important;
+}
+
+/* Tab buttons & secondary controls */
+html.light-mode button.bg-black\/60 {
+  background-color: #F0E8E4 !important;
+  color: #8B0000 !important;
+  border-color: rgba(139, 0, 0, 0.2) !important;
+}
+
+html.light-mode button.bg-black\/60:hover {
+  background-color: #8B0000 !important;
+  color: #FFFFFF !important;
+}
+
+/* Hover utility overrides for Light Mode */
+html.light-mode .hover\:bg-cream:hover {
+  background-color: #8B0000 !important;
+  color: #FFFFFF !important;
+}
+
+html.light-mode .hover\:text-black:hover {
+  color: #FFFFFF !important;
+}
+
+html.light-mode .hover\:text-cream:hover {
+  color: #8B0000 !important;
+}
+
+/* Inputs & Form Elements */
+html.light-mode input,
+html.light-mode select,
+html.light-mode textarea {
+  color: #2C1810 !important;
+  border-color: rgba(139, 0, 0, 0.25) !important;
+}
+
+html.light-mode input::placeholder,
+html.light-mode textarea::placeholder {
+  color: #8C7870 !important;
+}
+
+html.light-mode select option {
+  background-color: #FFFFFF !important;
+  color: #2C1810 !important;
+}
+
+/* Shadows & Cards */
+html.light-mode .shadow-lg,
+html.light-mode .shadow-xl,
+html.light-mode .shadow-2xl {
+  box-shadow: 0 10px 30px -5px rgba(139, 0, 0, 0.08), 0 4px 6px -2px rgba(139, 0, 0, 0.04) !important;
+}
+
+/* Hero Background Radial Glow in Light Mode */
+html.light-mode #home .absolute.inset-0.bg-\[radial-gradient\(ellipse_at_center\2c _var\(--tw-gradient-stops\)\)\] {
+  background: radial-gradient(ellipse at center, rgba(245,225,220,0.7) 0%, rgba(250,247,242,0.95) 70%, #FAF7F2 100%) !important;
+  opacity: 1 !important;
+}
+
+/* Preserve Pure Dark Background for Contact Section in Light Mode */
+html.light-mode #contact {
+  background-color: #0a0a0a !important;
+  color: #FDFBF7 !important;
+}
+
+html.light-mode #contact .text-cream,
+html.light-mode #contact .text-cream\/90,
+html.light-mode #contact .text-cream\/80,
+html.light-mode #contact .text-cream\/70,
+html.light-mode #contact .text-cream\/60,
+html.light-mode #contact .text-cream\/50,
+html.light-mode #contact .text-cream\/40 {
+  color: #FDFBF7 !important;
+}
+
+html.light-mode #contact .bg-gray_dark\/50,
+html.light-mode #contact .bg-gray_dark\/60,
+html.light-mode #contact .bg-black\/60 {
+  background-color: rgba(26, 26, 26, 0.6) !important;
+}
+
+html.light-mode #contact .border-cream\/10,
+html.light-mode #contact .border-cream\/30 {
+  border-color: rgba(253, 251, 247, 0.1) !important;
+}
+
+html.light-mode #contact input,
+html.light-mode #contact select {
+  color: #FDFBF7 !important;
+  border-color: rgba(253, 251, 247, 0.3) !important;
+}
+
+html.light-mode #contact input::placeholder {
+  color: rgba(253, 251, 247, 0.4) !important;
 }

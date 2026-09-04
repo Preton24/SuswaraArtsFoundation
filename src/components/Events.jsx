@@ -3,10 +3,10 @@ import group7Img from '../assets/group7.jpg';
 
 const Events = () => {
   return (
-    <section id="events" className="bg-black text-cream py-24 md:py-32 relative">
+    <section id="events" className="bg-black text-cream py-12 md:py-16 relative border-b border-cream/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
-        <div className="mb-16">
+        <div className="mb-8">
           <h2 className="text-burgundy uppercase tracking-[0.2em] text-sm font-semibold mb-4">Happenings</h2>
           <h3 className="text-4xl md:text-5xl font-serif">Events & Workshops</h3>
         </div>
