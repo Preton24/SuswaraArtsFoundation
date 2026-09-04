@@ -60,26 +60,79 @@ html.light-mode .bg-black\/95 {
   background-color: rgba(250, 247, 242, 0.96) !important;
 }
 
-/* Keep Fullscreen Lightbox Modal Dark for optimal photo viewing */
-html.light-mode .fixed.z-50.bg-black\/95,
-html.light-mode .fixed.z-50.bg-black\/80 {
+/* Keep Fullscreen Photo Lightbox Modal Dark for optimal photo viewing */
+html.light-mode .lightbox-modal {
   background-color: rgba(10, 10, 10, 0.96) !important;
 }
 
-html.light-mode .fixed.z-50.bg-black\/95 .text-cream,
-html.light-mode .fixed.z-50.bg-black\/80 .text-cream,
-html.light-mode .fixed.z-50.bg-black\/95 .text-cream\/80,
-html.light-mode .fixed.z-50.bg-black\/80 .text-cream\/80,
-html.light-mode .fixed.z-50.bg-black\/95 .text-cream\/70,
-html.light-mode .fixed.z-50.bg-black\/80 .text-cream\/70,
-html.light-mode .fixed.z-50.bg-black\/95 .text-cream\/60,
-html.light-mode .fixed.z-50.bg-black\/80 .text-cream\/60 {
+html.light-mode .lightbox-modal .text-cream,
+html.light-mode .lightbox-modal .text-cream\/80,
+html.light-mode .lightbox-modal .text-cream\/70,
+html.light-mode .lightbox-modal .text-cream\/60 {
   color: #FDFBF7 !important;
 }
 
-html.light-mode .fixed.z-50.bg-black\/95 .bg-white\/10,
-html.light-mode .fixed.z-50.bg-black\/80 .bg-white\/10 {
-  background-color: rgba(255, 255, 255, 0.15) !important;
+/* Course Details Pop-Up Modal in Light Mode */
+html.light-mode .course-modal {
+  background-color: #FAF7F2 !important;
+  border-color: rgba(139, 0, 0, 0.25) !important;
+  color: #2C1810 !important;
+  box-shadow: 0 25px 50px -12px rgba(139, 0, 0, 0.25) !important;
+}
+
+html.light-mode .course-modal .text-cream,
+html.light-mode .course-modal .text-cream\/90,
+html.light-mode .course-modal .text-cream\/80,
+html.light-mode .course-modal .text-cream\/70,
+html.light-mode .course-modal .text-cream\/60 {
+  color: #2C1810 !important;
+}
+
+html.light-mode .course-modal .text-burgundy {
+  color: #8B0000 !important;
+}
+
+html.light-mode .course-modal .border-cream\/10,
+html.light-mode .course-modal .border-cream\/15,
+html.light-mode .course-modal .border-cream\/20,
+html.light-mode .course-modal .border-cream\/30 {
+  border-color: rgba(139, 0, 0, 0.15) !important;
+}
+
+html.light-mode .course-modal .modal-close-btn {
+  color: #2C1810 !important;
+  background-color: rgba(139, 0, 0, 0.08) !important;
+}
+
+html.light-mode .course-modal .modal-close-btn:hover {
+  background-color: #8B0000 !important;
+  color: #FFFFFF !important;
+}
+
+html.light-mode .course-modal a.bg-burgundy,
+html.light-mode .course-modal button.bg-burgundy {
+  background-color: #8B0000 !important;
+  color: #FFFFFF !important;
+  border-color: #8B0000 !important;
+}
+
+html.light-mode .course-modal a.bg-burgundy:hover,
+html.light-mode .course-modal button.bg-burgundy:hover {
+  background-color: #5C0000 !important;
+  color: #FFFFFF !important;
+  border-color: #5C0000 !important;
+}
+
+html.light-mode .course-modal button.modal-secondary-btn {
+  border-color: #8B0000 !important;
+  color: #8B0000 !important;
+  background-color: transparent !important;
+}
+
+html.light-mode .course-modal button.modal-secondary-btn:hover {
+  background-color: #8B0000 !important;
+  color: #FFFFFF !important;
+  border-color: #8B0000 !important;
 }
 
 /* Typography & Text colors */

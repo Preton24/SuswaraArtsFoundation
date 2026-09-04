@@ -75,10 +75,10 @@ const Courses = () => {
             <div
               key={course.id}
               onClick={() => openCourseModal(course)}
-              className="bg-black/50 border border-cream/10 p-8 md:p-10 hover:border-burgundy/70 transition-all duration-500 rounded-2xl flex flex-col justify-between group cursor-pointer shadow-xl hover:shadow-2xl hover:shadow-burgundy/10 transform hover:-translate-y-1"
+              className="bg-black/50 border border-cream/10 p-8 md:p-10 hover:border-burgundy transition-all duration-500 rounded-2xl flex flex-col justify-between group cursor-pointer shadow-xl hover:shadow-2xl hover:shadow-burgundy/20 transform hover:-translate-y-1"
             >
               <div>
-                <h3 className="text-3xl md:text-4xl font-serif text-cream mb-2 group-hover:text-burgundy_light transition-colors">
+                <h3 className="text-3xl md:text-4xl font-serif text-cream mb-2 group-hover:text-burgundy transition-colors">
                   {course.title}
                 </h3>
                 <p className="text-xs uppercase tracking-widest text-burgundy mb-4 font-mono font-medium">
@@ -89,7 +89,7 @@ const Courses = () => {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-cream/10 flex items-center justify-between text-xs uppercase tracking-widest text-burgundy font-semibold group-hover:translate-x-1 transition-transform">
+              <div className="pt-4 border-t border-cream/10 flex items-center justify-between text-xs uppercase tracking-widest text-burgundy font-bold group-hover:translate-x-1 transition-transform">
                 <span>View Full Details</span>
                 <ArrowRight size={16} />
               </div>
@@ -108,37 +108,37 @@ const Courses = () => {
           ></div>
 
           {/* Modal Container */}
-          <div className="relative z-10 bg-gray_dark border border-cream/20 rounded-2xl max-w-2xl w-full p-6 md:p-10 text-cream shadow-2xl overflow-y-auto max-h-[90vh]">
+          <div className="relative z-10 bg-gray_dark border border-burgundy/30 rounded-2xl max-w-2xl w-full p-6 md:p-10 text-cream shadow-2xl overflow-y-auto max-h-[90vh] course-modal">
             <button
               onClick={closeCourseModal}
-              className="absolute top-5 right-5 text-cream/60 hover:text-white p-2 rounded-full bg-cream/10 hover:bg-cream/20 transition-colors"
+              className="absolute top-5 right-5 text-cream/60 hover:text-white p-2 rounded-full bg-cream/10 hover:bg-burgundy transition-colors modal-close-btn"
               aria-label="Close modal"
             >
               <X size={20} />
             </button>
 
-            <span className="text-burgundy uppercase tracking-[0.25em] text-xs font-semibold px-3 py-1 bg-burgundy/10 rounded-full border border-burgundy/20 inline-block mb-3">
+            <span className="text-burgundy uppercase tracking-[0.25em] text-xs font-bold px-3.5 py-1 bg-burgundy/15 rounded-full border border-burgundy/30 inline-block mb-3">
               Course Details
             </span>
 
             <h3 className="text-3xl md:text-4xl font-serif text-cream mb-1">
               {activeCourse.title}
             </h3>
-            <p className="text-xs uppercase tracking-widest text-burgundy mb-6 font-mono font-medium">
+            <p className="text-xs uppercase tracking-widest text-burgundy mb-6 font-mono font-bold">
               {activeCourse.subtitle}
             </p>
 
-            <p className="text-cream/80 font-light text-base leading-relaxed mb-8 border-b border-cream/10 pb-6">
+            <p className="text-cream/80 font-light text-base leading-relaxed mb-8 border-b border-cream/15 pb-6">
               {activeCourse.fullDesc}
             </p>
 
             <div className="mb-8">
-              <h4 className="text-xs uppercase tracking-widest text-cream/50 font-semibold mb-4">
+              <h4 className="text-xs uppercase tracking-widest text-burgundy font-bold mb-4">
                 Syllabus & Key Highlights:
               </h4>
               <div className="space-y-3">
                 {activeCourse.features.map((feat, idx) => (
-                  <div key={idx} className="flex items-start text-sm text-cream/90 font-light">
+                  <div key={idx} className="flex items-start text-sm text-cream/90 font-normal">
                     <CheckCircle2 size={16} className="text-burgundy mr-3 mt-0.5 flex-shrink-0" />
                     <span>{feat}</span>
                   </div>
@@ -146,17 +146,17 @@ const Courses = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-cream/10">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-cream/15">
               <a
                 href="#contact"
                 onClick={closeCourseModal}
-                className="flex-1 text-center py-3.5 bg-burgundy text-white text-xs uppercase tracking-widest font-semibold rounded-xl hover:bg-burgundy/90 transition-colors shadow-lg shadow-burgundy/20"
+                className="flex-1 text-center py-3.5 bg-burgundy text-black font-bold text-xs uppercase tracking-widest rounded-xl hover:bg-cream hover:text-black transition-all duration-300 shadow-lg shadow-burgundy/40 transform hover:-translate-y-1"
               >
                 Inquire / Apply for Course
               </a>
               <button
                 onClick={closeCourseModal}
-                className="py-3.5 px-6 border border-cream/20 text-cream/80 text-xs uppercase tracking-widest font-medium rounded-xl hover:bg-cream/10 transition-colors"
+                className="py-3.5 px-6 border border-cream/30 text-cream font-medium text-xs uppercase tracking-widest rounded-xl hover:bg-burgundy hover:text-white hover:border-burgundy transition-all duration-300 transform hover:-translate-y-1 modal-secondary-btn"
               >
                 Close
               </button>
