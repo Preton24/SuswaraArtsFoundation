@@ -47,10 +47,10 @@ const Hero = () => {
             A Bengaluru-based institution dedicated to nurturing artistic excellence through deep-rooted classical traditions and modern pedagogy, offering enriching online and offline classes for learners of all ages.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#courses" className="inline-block border border-cream text-cream px-8 py-3.5 uppercase tracking-widest text-sm hover:bg-cream hover:text-black transition-colors duration-300 text-center font-medium">
+            <a href="#courses" className="inline-block border border-cream text-cream px-8 py-3.5 uppercase tracking-widest text-sm hover:bg-cream hover:text-black transition-all duration-300 text-center font-medium rounded-xl shadow-lg shadow-burgundy/20 hover:shadow-xl hover:shadow-burgundy/40 transform hover:-translate-y-1 hover:scale-[1.02]">
               Explore Courses
             </a>
-            <a href="#contact" className="inline-block bg-burgundy border border-burgundy text-cream px-8 py-3.5 uppercase tracking-widest text-sm hover:bg-cream hover:text-black hover:border-cream transition-colors duration-300 text-center font-medium">
+            <a href="#contact" className="inline-block bg-burgundy border border-burgundy text-black font-semibold px-8 py-3.5 uppercase tracking-widest text-sm hover:bg-cream hover:text-black hover:border-cream transition-all duration-300 text-center rounded-xl shadow-lg shadow-burgundy/40 hover:shadow-xl hover:shadow-burgundy/60 transform hover:-translate-y-1 hover:scale-[1.02]">
               Enroll Now
             </a>
           </div>

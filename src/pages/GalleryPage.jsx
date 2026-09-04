@@ -143,7 +143,7 @@ const GalleryPage = () => {
                 : 'bg-gray_dark text-cream/70 hover:text-cream border border-cream/10'
             }`}
           >
-            All Folders (3)
+            All Events
           </button>
           <button
             onClick={() => setActiveTab('annual')}

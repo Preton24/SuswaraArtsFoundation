@@ -294,7 +294,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="w-full bg-burgundy text-cream py-3 text-xs tracking-widest uppercase hover:bg-cream hover:text-black transition-colors duration-300 mt-3 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl font-semibold shadow-md"
+                  className="w-full bg-burgundy text-black font-bold py-3 text-xs tracking-widest uppercase hover:bg-cream hover:text-black transition-all duration-300 mt-3 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl shadow-lg shadow-burgundy/40 transform hover:-translate-y-1 hover:scale-[1.01]"
                 >
                   {status === 'submitting' ? 'Submitting...' : 'Submit Inquiry'}
                 </button>

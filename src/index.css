@@ -251,3 +251,39 @@ html.light-mode #contact select {
 html.light-mode #contact input::placeholder {
   color: rgba(253, 251, 247, 0.4) !important;
 }
+
+/* ==========================================================================
+   BUTTON LIFT EFFECT & CONTRAST UTILITIES
+   ========================================================================== */
+a.bg-burgundy,
+button.bg-burgundy {
+  color: #000000;
+  font-weight: 600;
+  box-shadow: 0 8px 22px -4px rgba(139, 0, 0, 0.45), 0 4px 6px -2px rgba(139, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a.bg-burgundy:hover,
+button.bg-burgundy:hover {
+  color: #000000;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 30px -4px rgba(139, 0, 0, 0.65), 0 8px 12px -2px rgba(139, 0, 0, 0.35);
+}
+
+a.border-cream,
+button.border-cream,
+a.border-burgundy,
+button.border-burgundy {
+  box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a.border-cream:hover,
+button.border-cream:hover,
+a.border-burgundy:hover,
+button.border-burgundy:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 26px -4px rgba(139, 0, 0, 0.45);
+}
+
+
