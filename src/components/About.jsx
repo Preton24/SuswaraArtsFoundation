@@ -1,6 +1,6 @@
 import React from 'react';
 import sahanaImg from '../assets/sahana.jpeg';
-import pose7Img from '../assets/pose7.jpg';
+import manasaImg from '../assets/manasa.jpeg';
 import TiltedCard from './TiltedCard';
 
 const About = () => {
@@ -53,7 +53,7 @@ const About = () => {
             {/* Guru 1 */}
             <div className="flex flex-col items-center text-center">
               <TiltedCard
-                imageSrc={sahanaImg}
+                imageSrc={manasaImg}
                 altText="Manasa"
                 containerHeight="300px"
                 containerWidth="300px"
@@ -65,7 +65,7 @@ const About = () => {
                 showTooltip={false}
               />
               <div className="mt-8">
-                <h4 className="font-serif text-2xl text-cream mb-2">Smt Manasa</h4>
+                <h4 className="font-serif text-2xl text-cream mb-2">Vidushi Smt. Manasa Vinay</h4>
                 <p className="font-sans text-sm tracking-[0.2em] text-burgundy uppercase">Vocalist</p>
               </div>
             </div>
